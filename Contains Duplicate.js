@@ -24,3 +24,7 @@ num.sort((a,b)=>a-b);
 }  
 return false;
 }
+
+or 
+
+containsDuplicate=nums=>new Set(nums).size !== nums.length;

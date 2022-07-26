@@ -4,7 +4,23 @@ The product of any prefix or suffix of nums is guaranteed to fit in a 32-bit int
 
 You must write an algorithm that runs in O(n) time and without using the division operation.
 
-function productExceptSelf(nums){
+function arrayOfProducts(array){
+let outputArr = [];
+  for(let i = 0; i<array.length; i++){
+  let runningProduct = 1;
+    for(let j= 0; j<array.length; j++){
+    if(i !== j){
+    runningProduct = array[j] * runningProduct;
+      }
+      outputArr[i] = runningProduct
+    }
+  } 
+  return outputArr
+}
+
+or
+
+function productExceptSelf(array){
   let outputArr = []
   let product = 1;
   for(let i=0; i<array.length;i++){

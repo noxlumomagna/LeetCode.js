@@ -4,20 +4,12 @@ You may assume that each input would have exactly one solution, and you may not 
 
 You can return the answer in any order.
 
-//create two counters
-//first counter iterating up to the 2nd to last number
-//second counter iterating to the last number
- //checking if numbers add up to sum
- //if target is reached, return numbers as indicies
-
 function twoSum(nums,target){
- for(let i=0; i<nums.length-1;i++){
-     let left = nums[i]
- for(let j=i+1; j<nums.length; j++){
-     let right = nums[j];
-    if(left + right == target){
-        return [i,j]
-      }
+    for(let i=0;i<nums.length;i++){
+        for(let j = i+1; j<nums.length; j++){
+                if(nums[i] + nums[j] === target){
+                    return [i,j]
+                }
+            }
+        }
     }
-  }
-} 

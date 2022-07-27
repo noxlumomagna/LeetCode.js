@@ -5,19 +5,6 @@ Given an integer array nums, return true if any value appears at least twice in 
   //if value does exist in memory, return true
 
 function containsDuplicate(num){
-  let memory = {};
-    for(let i=0; i<num.length; i++)
-    if(memory[num[i]] == undefined){
-        memory[num[i]] = "new memory"
-    } else {
-        return true;
-    }
-    return false;
-};
-
-or 
-
-function containsDuplicate(num){
 num.sort((a,b)=>a-b);
   for(let i=0; i<num.length; i++){
     if (i > 0 && num[i-1] == num[i]) return true; 

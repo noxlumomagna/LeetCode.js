@@ -5,7 +5,7 @@ Return the fewest number of coins that you need to make up that amount. If that 
 You may assume that you have an infinite number of each kind of coin.
 
 function coinChange(coins, amount) {
-        let combos = Array(amount + 1).fill(amount + 1);
+    let combos = Array(amount + 1).fill(amount + 1);
     combos[0] = 0;
     for (const coin of coins) {
         for (let j = coin; j <= amount; ++j) {

@@ -15,28 +15,15 @@ function isAnagram(s,t){
 or
 
 function isAnagram(s,t){
-    let hashMap = {}
-    if(s.length != t.length) return false;
-
+    if(s.length != t.length) return false
+    let comparison = {}
+    
     for(let i=0;i<s.length;i++){
-        hashMap[s[i]] = (hashMap[s[i]] || 0) + 1
-        hashMap[t[i]] = (hashMap[t[i]] || 0) - 1
+        comparison[s[i]] = (comparison[s[i]] || 0) + 1
+        comparison[t[i]] = (comparison[t[i]] || 0) - 1
     }
-    for(let chickenNugget in hashMap){
-        if(hashMap[chickenNugget] !== 0) return false
+    for(let instance in comparison){
+        if(comparison[instance] !== 0) return false
     }
     return true
-};
-
-or
-
-function isAnagram(s,t){
-    if (s.length != t.length) return false;
-    let record = new Array(26).fill(0);
-    let base = 'a'.charCodeAt(0);
-    for (let i = 0; i < s.length; ++i) {
-        ++record[s.charCodeAt(i) - base];
-        --record[t.charCodeAt(i) - base];
-    }
-    return record.every(v => v == 0);
 };

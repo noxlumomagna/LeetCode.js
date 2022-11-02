@@ -2,7 +2,7 @@ Given a string s consisting of words and spaces, return the length of the last w
 
 A word is a maximal substring consisting of non-space characters only.
 
-function lengthOfLastWord(s){
-    s = s.trim().split(' ')
-    return s[s.length-1].length
-}
+function lengthOfLastWord(s) {
+    let noWhiteSpace = s.trim().split(' ')
+    return noWhiteSpace[noWhiteSpace.length-1].length
+};
